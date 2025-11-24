@@ -1110,6 +1110,12 @@ html {
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    line-height: 1.6;
+}
+
+.newspaper-footer p {
+    margin: 0;
+    padding: 0;
 }
 
 .footer-link {
@@ -1346,8 +1352,25 @@ html {
         display: none;
     }
 
+    .newspaper-footer {
+        padding: 1.25rem 1rem;
+        font-size: 0.7rem;
+        line-height: 1.6;
+    }
+
+    .newspaper-footer::before {
+        font-size: 0.65rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+        padding: 0 0.5rem;
+        word-break: break-word;
+    }
+
     .newspaper-footer p {
         text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
     }
 }
 
@@ -1387,6 +1410,23 @@ html {
 
     .drop-cap::first-letter {
         font-size: 2.5rem;
+    }
+
+    .newspaper-footer {
+        padding: 1rem 0.75rem;
+        font-size: 0.65rem;
+    }
+
+    .newspaper-footer::before {
+        font-size: 0.6rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+        padding: 0 0.25rem;
+    }
+
+    .newspaper-footer p {
+        font-size: 0.65rem;
+        line-height: 1.5;
     }
 
     .headlines-grid,
