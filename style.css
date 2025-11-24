@@ -274,6 +274,7 @@ body {
     border: 1px solid #1a1a1a;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .profile-photo {
@@ -282,6 +283,8 @@ body {
     display: block;
     filter: grayscale(100%) contrast(1.15) brightness(0.9);
     border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .photo-caption {
@@ -1213,6 +1216,17 @@ html {
         padding: 0.5rem;
         background-color: #fff;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .profile-photo-container .profile-photo {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
     }
 
     .headlines-grid,
@@ -1279,16 +1293,25 @@ html {
     }
 
     .profile-photo-container {
-        justify-self: center;
+        float: none;
+        width: 180px;
+        margin: 0 auto 1.5rem auto;
+        display: block;
         border: 1px solid #1a1a1a;
         padding: 0.5rem;
         background-color: #fff;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        text-align: center;
     }
 
-    .profile-photo {
-        width: 150px;
-        height: 180px;
+    .profile-photo-container .profile-photo {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
     }
 
     .headline-title {
@@ -1349,6 +1372,17 @@ html {
         padding: 0.5rem;
         background-color: #fff;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .profile-photo-container .profile-photo {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
     }
 
     .drop-cap::first-letter {
