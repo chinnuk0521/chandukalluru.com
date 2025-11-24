@@ -1102,13 +1102,12 @@ html {
 }
 
 .newspaper-footer::before {
-    content: 'THE CHANDU CHRONICLE | Established 2025 | Bengaluru, Karnataka';
+    content: 'chandu kalluru | Established 2025 | Bengaluru, Karnataka';
     display: block;
     margin-bottom: 0.5rem;
     font-size: 0.7rem;
     color: #888;
     font-style: italic;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.6;
 }
@@ -1371,6 +1370,11 @@ html {
         margin: 0;
         padding: 0;
         line-height: 1.6;
+    }
+
+    /* Hide only the pipe symbol "|" on mobile */
+    .newspaper-footer .footer-pipe {
+        display: none;
     }
 }
 
