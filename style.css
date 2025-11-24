@@ -1122,6 +1122,14 @@ html {
     text-decoration: underline;
 }
 
+.newspaper-footer p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
@@ -1201,6 +1209,10 @@ html {
         width: 180px;
         margin: 0 auto 1.5rem auto;
         display: block;
+        border: 1px solid #1a1a1a;
+        padding: 0.5rem;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     .headlines-grid,
@@ -1268,6 +1280,10 @@ html {
 
     .profile-photo-container {
         justify-self: center;
+        border: 1px solid #1a1a1a;
+        padding: 0.5rem;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     .profile-photo {
@@ -1301,6 +1317,15 @@ html {
         font-size: 0.75rem;
         padding: 0.3rem 0.6rem;
     }
+
+    /* Hide footer navigation links on mobile - main nav is in header */
+    .newspaper-footer .footer-link {
+        display: none;
+    }
+
+    .newspaper-footer p {
+        text-align: center;
+    }
 }
 
 /* Small mobile devices */
@@ -1320,6 +1345,10 @@ html {
     .profile-photo-container {
         width: 150px;
         margin: 0 auto 1.5rem auto;
+        border: 1px solid #1a1a1a;
+        padding: 0.5rem;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     .drop-cap::first-letter {
