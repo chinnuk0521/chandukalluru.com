@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="apple-touch-icon" href="Logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Masthead / Nameplate -->
     <header class="masthead">
@@ -33,11 +35,118 @@
     <!-- Main Newspaper Content -->
     <main class="newspaper-container">
         <div class="page-number">Page 5</div>
-        
+
         <!-- Projects Section -->
         <section class="section projects" id="projects">
             <h2 class="section-headline">PROJECTS & PORTFOLIO</h2>
-            
+
+            <!-- Project: Ownerr.live -->
+            <article class="project-card" id="ownerr">
+                <div class="project-header">
+                    <h3 class="project-title">Ownerr - Startup Acquisition Platform</h3>
+                    <div class="project-meta">
+                        <span class="project-type">Acquisition Marketplace • SaaS</span>
+                        <span class="project-status">Live</span>
+                    </div>
+                </div>
+
+                <div class="project-teaser">
+                    <p class="drop-cap">As a Technical Co-founder, I am building Ownerr, the infrastructure for
+                        startup ownership transfer. The platform enables founders to exit their startups at fair
+                        valuations while providing buyers with verified acquisition opportunities. Through business
+                        scoring, revenue and traffic verification, legal documentation, and secure deal management,
+                        Ownerr brings transparency and trust to the global startup acquisition ecosystem <a
+                            href="headlines.html#ownerr-headline" class="citation-link">[1]</a>.</p>
+                </div>
+
+                <button class="read-more-btn" onclick="toggleProposal('project_ownerr')">Read More →</button>
+
+                <div class="proposal-full" id="project_ownerr">
+                    <div class="proposal-content">
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <h4 class="info-label">Website</h4>
+                                <p><a href="https://ownerr.live/" target="_blank" rel="noopener noreferrer"
+                                        class="external-link">ownerr</a></p>
+                            </div>
+                            <div class="project-info-item">
+                                <h4 class="info-label">Role</h4>
+                                <p>Technical Co-founder</p>
+                            </div>
+                            <div class="project-info-item">
+                                <h4 class="info-label">Status</h4>
+                                <p>Live &amp; Onboarding Users</p>
+                            </div>
+                        </div>
+
+                        <h4 class="subsection-headline">Key Features</h4>
+                        <ul class="proposal-list">
+                            <li>End-to-end platform for selling and buying startups</li>
+                            <li>Automated business valuation and scoring</li>
+                            <li>Integration with analytics for traffic & revenue verification</li>
+                            <li>Standardized legal documentation templates</li>
+                            <li>Secure deal room and transaction management</li>
+                        </ul>
+                    </div>
+                    <button class="read-less-btn" onclick="toggleProposal('project_ownerr')">Read Less ↑</button>
+                </div>
+            </article>
+
+            <!-- Project: Clykur -->
+            <article class="project-card" id="clykur">
+                <div class="project-header">
+                    <h3 class="project-title">Clykur - SaaS Suite for MSMEs</h3>
+                    <div class="project-meta">
+                        <span class="project-type">SaaS • Startup</span>
+                        <span class="project-status">In Development</span>
+                    </div>
+                </div>
+
+                <div class="project-teaser">
+                    <p class="drop-cap">Clykur is developing a suite of SaaS products designed to empower Micro, Small,
+                        and Medium Enterprises (MSMEs) in India. The initial offerings, Cusown and FreeTrust, provide
+                        tools for MSME registration, customer ownership, and building trust with clients. The mission is
+                        to provide accessible technology that helps small businesses thrive in the digital economy <a
+                            href="editorial.html#clykur-editorial" class="citation-link">[1]</a>.</p>
+                </div>
+
+                <button class="read-more-btn" onclick="toggleProposal('project_clykur')">Read More →</button>
+
+                <div class="proposal-full" id="project_clykur">
+                    <div class="proposal-content">
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <h4 class="info-label">Website</h4>
+                                <p><a href="https://clykur.com" target="_blank" rel="noopener noreferrer"
+                                        class="external-link">clykur.com</a></p>
+                            </div>
+                            <div class="project-info-item">
+                                <h4 class="info-label">Focus</h4>
+                                <p>Indian MSMEs</p>
+                            </div>
+                            <div class="project-info-item">
+                                <h4 class="info-label">Products</h4>
+                                <p>Cusown &amp; FreeTrust</p>
+                            </div>
+                        </div>
+
+                        <h4 class="subsection-headline">Core Offerings</h4>
+                        <ul class="proposal-list">
+                            <li><strong>Cusown:</strong> A platform for businesses to build direct customer
+                                relationships and ownership.</li>
+                            <li><strong>FreeTrust:</strong> A free tool for businesses to display trust signals and
+                                social proof.</li>
+                            <li>Assistance with the official MSME registration process (Udyam Registration).</li>
+                        </ul>
+
+                        <h4 class="subsection-headline">Mission</h4>
+                        <p>To provide affordable and effective SaaS solutions that help small businesses in India
+                            establish their digital presence, build credibility, and achieve sustainable growth.</p>
+                    </div>
+                    <button class="read-less-btn" onclick="toggleProposal('project_clykur')">Read Less ↑</button>
+                </div>
+            </article>
+
             <!-- Project 1: Chandu UI -->
             <article class="project-card" id="chandu-ui">
                 <div class="project-header">
@@ -47,24 +156,31 @@
                         <span class="project-status">Published</span>
                     </div>
                 </div>
-                
+
                 <div class="project-teaser">
-                    <p class="drop-cap">A custom UI component library built with React, providing reusable, accessible, and well-documented components for modern web applications. Published to NPM and available for the developer community to use in their projects <a href="headlines.html#chandu-ui-headline" class="citation-link">[1]</a>.</p>
-                    <p>Features comprehensive documentation, TypeScript support, and follows modern design patterns. The library is actively maintained and continuously improved based on community feedback and real-world usage...</p>
+                    <p class="drop-cap">A custom UI component library built with React, providing reusable, accessible,
+                        and well-documented components for modern web applications. Published to NPM and available for
+                        the developer community to use in their projects <a href="headlines.html#chandu-ui-headline"
+                            class="citation-link">[1]</a>.</p>
+                    <p>Features comprehensive documentation, TypeScript support, and follows modern design patterns. The
+                        library is actively maintained and continuously improved based on community feedback and
+                        real-world usage...</p>
                 </div>
-                
+
                 <button class="read-more-btn" onclick="toggleProposal('project1')">Read More →</button>
-                
+
                 <div class="proposal-full" id="project1">
                     <div class="proposal-content">
                         <div class="project-info-grid">
                             <div class="project-info-item">
                                 <h4 class="info-label">Website</h4>
-                                <p><a href="https://chanduui.space/" target="_blank" rel="noopener noreferrer" class="external-link">chanduui.space</a></p>
+                                <p><a href="https://chanduui.space/" target="_blank" rel="noopener noreferrer"
+                                        class="external-link">chanduui.space</a></p>
                             </div>
                             <div class="project-info-item">
                                 <h4 class="info-label">NPM Package</h4>
-                                <p><a href="https://www.npmjs.com/~chanduui" target="_blank" rel="noopener noreferrer" class="external-link">chandu-ui-components</a></p>
+                                <p><a href="https://www.npmjs.com/~chanduui" target="_blank" rel="noopener noreferrer"
+                                        class="external-link">chandu-ui-components</a></p>
                             </div>
                             <div class="project-info-item">
                                 <h4 class="info-label">Installation</h4>
@@ -72,10 +188,11 @@
                             </div>
                             <div class="project-info-item">
                                 <h4 class="info-label">Repository</h4>
-                                <p><a href="https://github.com/chinnuk0521/Chandu-UI" target="_blank" rel="noopener noreferrer" class="external-link">GitHub</a></p>
+                                <p><a href="https://github.com/chinnuk0521/Chandu-UI" target="_blank"
+                                        rel="noopener noreferrer" class="external-link">GitHub</a></p>
                             </div>
                         </div>
-                        
+
                         <h4 class="subsection-headline">Key Features</h4>
                         <ul class="proposal-list">
                             <li>Reusable React components with TypeScript support</li>
@@ -99,20 +216,28 @@
                         <span class="project-status">Active</span>
                     </div>
                 </div>
-                
+
                 <div class="project-teaser">
-                    <p class="drop-cap">A comprehensive collection of advanced data visualization projects covering multiple sectors including sales analytics, healthcare insights, IPL performance, enterprise intelligence, and global unemployment analytics. Designed to help beginners and early-stage job seekers learn data visualization and analytics through real-world projects with actual data <a href="headlines.html#data-viz-headline" class="citation-link">[1]</a>.</p>
-                    <p>The portfolio features 5 major projects with 43+ complex, multi-dimensional visualizations, providing hands-on learning opportunities for those looking to build their data analytics skills and create portfolio-worthy projects. Built using Python and data analytics expertise gained during my freelance work <a href="business.html#freelance" class="citation-link">[2]</a>...</p>
+                    <p class="drop-cap">A comprehensive collection of advanced data visualization projects covering
+                        multiple sectors including sales analytics, healthcare insights, IPL performance, enterprise
+                        intelligence, and global unemployment analytics. Designed to help beginners and early-stage job
+                        seekers learn data visualization and analytics through real-world projects with actual data <a
+                            href="headlines.html#data-viz-headline" class="citation-link">[1]</a>.</p>
+                    <p>The portfolio features 5 major projects with 43+ complex, multi-dimensional visualizations,
+                        providing hands-on learning opportunities for those looking to build their data analytics skills
+                        and create portfolio-worthy projects. Built using Python and data analytics expertise gained
+                        during my freelance work <a href="business.html#freelance" class="citation-link">[2]</a>...</p>
                 </div>
-                
+
                 <button class="read-more-btn" onclick="toggleProposal('project2')">Read More →</button>
-                
+
                 <div class="proposal-full" id="project2">
                     <div class="proposal-content">
                         <div class="project-info-grid">
                             <div class="project-info-item">
                                 <h4 class="info-label">Repository</h4>
-                                <p><a href="https://github.com/chinnuk0521/data-visualization-portfolio" target="_blank" rel="noopener noreferrer" class="external-link">GitHub</a></p>
+                                <p><a href="https://github.com/chinnuk0521/data-visualization-portfolio" target="_blank"
+                                        rel="noopener noreferrer" class="external-link">GitHub</a></p>
                             </div>
                             <div class="project-info-item">
                                 <h4 class="info-label">Projects</h4>
@@ -127,16 +252,22 @@
                                 <p>Python</p>
                             </div>
                         </div>
-                        
+
                         <h4 class="subsection-headline">Project Breakdown</h4>
                         <ul class="proposal-list">
-                            <li><strong>Sales Analytics Dashboard:</strong> 6 comprehensive visualizations covering revenue trends, category-region analysis, and performance metrics</li>
-                            <li><strong>Healthcare Data Insights:</strong> 6 advanced visualizations analyzing patient data, disease patterns, and recovery outcomes</li>
-                            <li><strong>IPL Player Performance Analysis:</strong> 6 multi-dimensional visualizations across 5 seasons (2019-2023) with player comparisons and statistics</li>
-                            <li><strong>Enterprise Data Intelligence:</strong> 11 complex visualizations covering financial, HR, customer, and operational metrics</li>
-                            <li><strong>Global Unemployment Analytics:</strong> 14 comprehensive visualizations (largest project) with world overview, regional comparisons, pandemic impact, and predictive forecasting</li>
+                            <li><strong>Sales Analytics Dashboard:</strong> 6 comprehensive visualizations covering
+                                revenue trends, category-region analysis, and performance metrics</li>
+                            <li><strong>Healthcare Data Insights:</strong> 6 advanced visualizations analyzing patient
+                                data, disease patterns, and recovery outcomes</li>
+                            <li><strong>IPL Player Performance Analysis:</strong> 6 multi-dimensional visualizations
+                                across 5 seasons (2019-2023) with player comparisons and statistics</li>
+                            <li><strong>Enterprise Data Intelligence:</strong> 11 complex visualizations covering
+                                financial, HR, customer, and operational metrics</li>
+                            <li><strong>Global Unemployment Analytics:</strong> 14 comprehensive visualizations (largest
+                                project) with world overview, regional comparisons, pandemic impact, and predictive
+                                forecasting</li>
                         </ul>
-                        
+
                         <h4 class="subsection-headline">Educational Value</h4>
                         <ul class="proposal-list">
                             <li>Real-world datasets from multiple sectors</li>
@@ -150,60 +281,15 @@
                     <button class="read-less-btn" onclick="toggleProposal('project2')">Read Less ↑</button>
                 </div>
             </article>
-
-            <!-- Project 3: Clykur -->
-            <article class="project-card" id="clykur">
-                <div class="project-header">
-                    <h3 class="project-title">Clykur - AI-Powered Freelance Network</h3>
-                    <div class="project-meta">
-                        <span class="project-type">Platform • Startup</span>
-                        <span class="project-status">In Development</span>
-                    </div>
-                </div>
-                
-                <div class="project-teaser">
-                    <p class="drop-cap">A next-generation AI-powered freelance network established in 2025, designed to bridge the gap between businesses and global freelancers through a cooperatively-owned, federated platform. The platform makes collaboration, project management, and business growth seamless and intelligent <a href="index.html#front-page" class="citation-link">[1]</a>.</p>
-                    <p>Clykur focuses on AI-driven project assistance, intelligent workflows, and decentralized data ownership, enabling freelancers and clients to interact directly while maintaining control of their data. This relates to my proposal on decentralized freelance networks <a href="proposals.html#freelance-proposal" class="citation-link">[2]</a>...</p>
-                </div>
-                
-                <button class="read-more-btn" onclick="toggleProposal('project3')">Read More →</button>
-                
-                <div class="proposal-full" id="project3">
-                    <div class="proposal-content">
-                        <h4 class="subsection-headline">Key Features</h4>
-                        <ul class="proposal-list">
-                            <li>AI-driven project assistance and intelligent workflows</li>
-                            <li>Decentralized data ownership with user control</li>
-                            <li>Federated architecture for scalability</li>
-                            <li>Cooperative governance model</li>
-                            <li>Direct freelancer-client interaction</li>
-                            <li>Secure work portfolio storage</li>
-                            <li>Modern P2P technologies without blockchain overhead</li>
-                        </ul>
-                        
-                        <h4 class="subsection-headline">Technology Stack</h4>
-                        <ul class="proposal-list">
-                            <li>Federated architecture for multi-tenant support</li>
-                            <li>AI/ML integration for intelligent matching</li>
-                            <li>Modern web technologies for responsive design</li>
-                            <li>Secure data storage and privacy controls</li>
-                            <li>Cooperative governance mechanisms</li>
-                        </ul>
-                        
-                        <h4 class="subsection-headline">Mission</h4>
-                        <p>To create a platform that empowers freelancers and businesses without the overhead of blockchain technology, combining federation, cooperative governance, and modern P2P technologies to ensure true decentralization while maintaining usability and performance.</p>
-                    </div>
-                    <button class="read-less-btn" onclick="toggleProposal('project3')">Read Less ↑</button>
-                </div>
-            </article>
         </section>
     </main>
 
     <footer class="newspaper-footer">
-        <p>&copy; 2025 chandu kalluru. All rights reserved. <span class="footer-pipe">|</span> <a href="business.html" class="footer-link">← Previous</a> | <a href="classifieds.html" class="footer-link">Next Page →</a></p>
+        <p>&copy; 2025 chandu kalluru. All rights reserved. <span class="footer-pipe">|</span> <a href="business.html"
+                class="footer-link">← Previous</a> | <a href="classifieds.html" class="footer-link">Next Page →</a></p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>

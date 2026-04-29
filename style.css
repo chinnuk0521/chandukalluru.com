@@ -175,7 +175,7 @@ body {
 /* Page Number */
 .page-number {
     position: absolute;
-    top: 1rem;
+    top: 0.75rem;
     right: 1.5rem;
     font-size: 0.85rem;
     color: #666;
@@ -204,10 +204,19 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    text-align: left;
+}
+
+.section-headline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 2rem;
     padding-bottom: 0.75rem;
     border-bottom: 3px double #1a1a1a;
-    text-align: center;
     width: 100%;
 }
 
@@ -555,14 +564,28 @@ body {
     color: #1a1a1a;
 }
 
+.skills-section {
+    margin-bottom: 2.5rem;
+}
+
+.skills-section:last-child {
+    margin-bottom: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 2.5rem; /* row-gap column-gap */
+}
+
 .skills-list {
     margin-top: 0;
 }
 
 .skill-category {
-    margin-bottom: 1.75rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid #ddd;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .skill-category:last-child {
@@ -578,12 +601,18 @@ body {
     margin-bottom: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
+    line-height: 1.4;
 }
 
-.skill-category p {
+.skills-list p {
     font-size: 0.95rem;
-    line-height: 1.7;
-    text-align: justify;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 0.75rem;
+}
+
+.skills-list p:last-child {
+    margin-bottom: 0;
 }
 
 /* ============================================
@@ -977,6 +1006,38 @@ html {
     font-style: italic;
     flex-wrap: wrap;
 }
+
+.proposal-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+}
+
+.read-more-btn,
+.proposal-cta {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid #1a1a1a;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.read-more-btn:hover,
+.proposal-cta:hover {
+    background-color: #1a1a1a;
+    color: #fefefe;
+}
+
 
 .proposal-byline {
     font-weight: bold;
