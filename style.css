@@ -198,17 +198,27 @@ body {
     margin-bottom: 0;
 }
 
+
 .section-headline {
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px double #1a1a1a;
+    text-align: center;
+    width: 100%;
+}
+
+.section-headline-container .section-headline {
+    text-align: left;
+    border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
-    border-bottom: none;
-    text-align: left;
 }
+
 
 .section-headline-container {
     display: flex;
