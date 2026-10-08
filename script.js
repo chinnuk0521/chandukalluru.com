@@ -70,81 +70,96 @@
         // Update experience monthly (check once per day)
         setInterval(calculateExperience, 24 * 60 * 60 * 1000);
 
-        // Mobile navigation hamburger toggle & sticky header
-        let navToggle = document.getElementById('navToggle');
-        const newspaperNav = document.querySelector('.newspaper-nav');
-        const masthead = document.querySelector('.masthead');
+        // Sticky mobile bar: smooth hardware-accelerated appearance on scroll with zero jitter
+        function initStickyMobileHeader() {
+            let stickyBar = document.getElementById('stickyMobileBar');
+            const mainNav = document.querySelector('.newspaper-nav');
+            if (!stickyBar && mainNav) {
+                stickyBar = document.createElement('div');
+                stickyBar.id = 'stickyMobileBar';
+                stickyBar.className = 'sticky-mobile-bar';
+                stickyBar.innerHTML = `
+                    <div class="sticky-mobile-inner">
+                        <span class="sticky-mobile-title">chandu kalluru</span>
+                        <button class="nav-toggle sticky-nav-toggle" id="stickyNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                            <span class="hamburger-icon" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <nav class="sticky-mobile-nav" id="stickyMobileNav">
+                        ${mainNav.innerHTML}
+                    </nav>
+                `;
+                document.body.prepend(stickyBar);
 
-        if (newspaperNav) {
-            if (!navToggle) {
-                navToggle = document.createElement('button');
-                navToggle.className = 'nav-toggle';
-                navToggle.id = 'navToggle';
-                navToggle.setAttribute('aria-label', 'Toggle Navigation Menu');
-                navToggle.setAttribute('aria-expanded', 'false');
-                navToggle.innerHTML =
-                    '<span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>';
-                newspaperNav.parentNode.insertBefore(navToggle, newspaperNav);
-            }
+                const toggleBtn = stickyBar.querySelector('#stickyNavToggle');
+                const mobileNav = stickyBar.querySelector('#stickyMobileNav');
 
-            navToggle.addEventListener('click', function (e) {
-                e.stopPropagation();
-                const isOpen = newspaperNav.classList.toggle('open');
-                navToggle.classList.toggle('open', isOpen);
-                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            });
+                toggleBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const isOpen = mobileNav.classList.toggle('open');
+                    toggleBtn.classList.toggle('open', isOpen);
+                    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
 
-            // Close when clicking outside
-            document.addEventListener('click', function (e) {
-                if (
-                    !newspaperNav.contains(e.target) &&
-                    !navToggle.contains(e.target) &&
-                    newspaperNav.classList.contains('open')
-                ) {
-                    newspaperNav.classList.remove('open');
-                    navToggle.classList.remove('open');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                }
-            });
-
-            // Close on Escape key
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && newspaperNav.classList.contains('open')) {
-                    newspaperNav.classList.remove('open');
-                    navToggle.classList.remove('open');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navToggle.focus();
-                }
-            });
-        }
-
-        // Sticky header on mobile: activates upon scrolling
-        function handleScrollHeader() {
-            if (!masthead) return;
-            const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
-            const isMobile = window.innerWidth <= 768;
-
-            if (isMobile && scrollY > 30) {
-                masthead.classList.add('scrolled');
-            } else {
-                masthead.classList.remove('scrolled');
-                // Auto close mobile nav if scrolled back to top
-                if (scrollY <= 30 && newspaperNav && newspaperNav.classList.contains('open')) {
-                    newspaperNav.classList.remove('open');
-                    if (navToggle) {
-                        navToggle.classList.remove('open');
-                        navToggle.setAttribute('aria-expanded', 'false');
+                // Close when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!stickyBar.contains(e.target) && mobileNav.classList.contains('open')) {
+                        mobileNav.classList.remove('open');
+                        toggleBtn.classList.remove('open');
+                        toggleBtn.setAttribute('aria-expanded', 'false');
                     }
+                });
+
+                // Close on Escape key
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+                        mobileNav.classList.remove('open');
+                        toggleBtn.classList.remove('open');
+                        toggleBtn.setAttribute('aria-expanded', 'false');
+                        toggleBtn.focus();
+                    }
+                });
+            }
+
+            function handleScroll() {
+                if (!stickyBar) return;
+                const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+                const isMobile = window.innerWidth <= 768;
+
+                if (isMobile) {
+                    // Hysteresis threshold: activates when scrolled past 75px, hides back above 35px
+                    if (scrollY > 75) {
+                        stickyBar.classList.add('visible');
+                    } else if (scrollY < 35) {
+                        stickyBar.classList.remove('visible');
+                        const mobileNav = stickyBar.querySelector('#stickyMobileNav');
+                        const toggleBtn = stickyBar.querySelector('#stickyNavToggle');
+                        if (mobileNav && mobileNav.classList.contains('open')) {
+                            mobileNav.classList.remove('open');
+                            if (toggleBtn) {
+                                toggleBtn.classList.remove('open');
+                                toggleBtn.setAttribute('aria-expanded', 'false');
+                            }
+                        }
+                    }
+                } else {
+                    stickyBar.classList.remove('visible');
                 }
             }
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            window.addEventListener('resize', function () {
+                updateDateTime();
+                handleScroll();
+            });
+            handleScroll();
         }
 
-        window.addEventListener('scroll', handleScrollHeader, { passive: true });
-        window.addEventListener('resize', function () {
-            updateDateTime();
-            handleScrollHeader();
-        });
-        handleScrollHeader();
+        initStickyMobileHeader();
     });
 
     // Optional: Add print-friendly behavior

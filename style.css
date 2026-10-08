@@ -169,7 +169,8 @@ body {
 }
 
 /* Hamburger Navigation Toggle - Hidden by default on desktop */
-.nav-toggle {
+.nav-toggle,
+.sticky-mobile-bar {
     display: none;
 }
 
@@ -537,11 +538,8 @@ body {
     line-height: 1.6;
     color: var(--ink-secondary);
     margin: 0;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
 }
 
 /* ==========================================================================
@@ -618,11 +616,8 @@ body {
     font-size: 0.95rem;
     line-height: 1.65;
     color: var(--ink-secondary);
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
 }
 
 /* ==========================================================================
@@ -679,11 +674,8 @@ body {
     font-size: 0.98rem;
     line-height: 1.65;
     color: var(--ink-secondary);
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
     margin: 0;
 }
 
@@ -703,8 +695,7 @@ body {
     color: var(--ink-secondary);
     padding-left: 1.25rem;
     position: relative;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     text-wrap: pretty;
 }
 
@@ -780,8 +771,8 @@ body {
     line-height: 1.6;
     color: var(--ink-secondary);
     margin: 0;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
+    text-wrap: pretty;
 }
 
 /* Education Card */
@@ -927,11 +918,8 @@ body {
     line-height: 1.65;
     margin: 0;
     color: var(--ink-secondary);
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
 }
 
 .project-framework strong {
@@ -1054,11 +1042,8 @@ body {
     line-height: 1.65;
     color: var(--ink-secondary);
     margin-bottom: 0.35rem;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
 }
 
 .proposal-list strong {
@@ -1164,11 +1149,8 @@ body {
     font-size: 0.98rem;
     line-height: 1.65;
     color: var(--ink-secondary);
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
 }
 
 .proposal-actions {
@@ -1271,11 +1253,8 @@ body {
     line-height: 1.65;
     color: var(--ink-secondary);
     flex-grow: 1;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
 }
 
 .ad-content strong {
@@ -1319,11 +1298,8 @@ body {
     line-height: 1.6;
     color: var(--ink-secondary);
     margin: 0;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
 }
 
 /* ==========================================================================
@@ -1490,25 +1466,17 @@ code {
         padding-right: 1.1rem;
     }
 
+    /* Masthead on mobile: Normal document flow so page height NEVER jumps or shakes */
     .masthead {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
+        position: static;
         overflow: visible;
         background-color: var(--paper-bg);
         padding-top: 1.15rem;
         padding-bottom: 0.55rem;
-        transition:
-            padding 0.2s ease,
-            box-shadow 0.2s ease,
-            border-color 0.2s ease;
     }
 
-    .masthead.scrolled {
-        padding-top: 0.55rem;
-        padding-bottom: 0.55rem;
-        border-bottom: 2px solid var(--rule-heavy);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    .masthead .nav-toggle {
+        display: none !important;
     }
 
     .masthead-brand-row {
@@ -1517,27 +1485,11 @@ code {
         width: 100%;
     }
 
-    .masthead.scrolled .masthead-brand-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
     .newspaper-title {
         font-size: 2rem;
         letter-spacing: 0.08em;
         text-align: center;
-        transition:
-            font-size 0.2s ease,
-            margin 0.2s ease;
-    }
-
-    .masthead.scrolled .newspaper-title {
-        font-size: 1.25rem;
-        letter-spacing: 0.06em;
-        text-align: left;
-        margin: 0;
+        margin: 0 auto;
     }
 
     /* Masthead Meta Row: Strictly in ONE single line on mobile */
@@ -1555,10 +1507,6 @@ code {
         width: 100%;
         box-sizing: border-box;
         margin-top: 0.35rem;
-    }
-
-    .masthead.scrolled .masthead-meta {
-        display: none;
     }
 
     .masthead-meta::before {
@@ -1588,13 +1536,59 @@ code {
         flex-shrink: 0;
     }
 
-    /* Mobile Hamburger Button - Hidden at top, appears when scrolled on the right */
-    .nav-toggle {
-        display: none;
+    /* In-flow nav hidden on mobile (cleanly served by the fixed sticky bar) */
+    .masthead .newspaper-nav {
+        display: none !important;
     }
 
-    .masthead.scrolled .nav-toggle {
-        display: inline-flex;
+    /* Fixed Sticky Mobile Bar: Zero jitter, smooth slide-in */
+    .sticky-mobile-bar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--paper-bg);
+        border-bottom: 2px solid var(--rule-heavy);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        z-index: 9999;
+        transform: translateY(-100%);
+        transition:
+            transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+            opacity 0.2s ease;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sticky-mobile-bar.visible {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .sticky-mobile-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.55rem 1.1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .sticky-mobile-title {
+        font-family: var(--font-masthead);
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-primary);
+        line-height: 1;
+        margin: 0;
+    }
+
+    .sticky-nav-toggle {
+        display: inline-flex !important;
         align-items: center;
         justify-content: center;
         padding: 0.42rem 0.52rem;
@@ -1608,18 +1602,18 @@ code {
         flex-shrink: 0;
     }
 
-    .masthead.scrolled .nav-toggle:hover {
+    .sticky-nav-toggle:hover {
         background-color: var(--paper-subtle);
     }
 
-    .masthead.scrolled .nav-toggle.open {
+    .sticky-nav-toggle.open {
         background-color: var(--ink-primary);
         color: #ffffff;
         box-shadow: 0 0 0 var(--rule-heavy);
         transform: translate(2px, 2px);
     }
 
-    .masthead.scrolled .nav-toggle.open .hamburger-icon span {
+    .sticky-nav-toggle.open .hamburger-icon span {
         background-color: #ffffff;
     }
 
@@ -1642,20 +1636,20 @@ code {
             opacity 0.2s ease;
     }
 
-    .nav-toggle.open .hamburger-icon span:nth-child(1) {
+    .sticky-nav-toggle.open .hamburger-icon span:nth-child(1) {
         transform: translateY(5px) rotate(45deg);
     }
 
-    .nav-toggle.open .hamburger-icon span:nth-child(2) {
+    .sticky-nav-toggle.open .hamburger-icon span:nth-child(2) {
         opacity: 0;
     }
 
-    .nav-toggle.open .hamburger-icon span:nth-child(3) {
+    .sticky-nav-toggle.open .hamburger-icon span:nth-child(3) {
         transform: translateY(-5px) rotate(-45deg);
     }
 
-    /* Mobile Collapsible Navigation (Floating dropdown from sticky bar) */
-    .newspaper-nav {
+    /* Dropdown navigation inside the sticky bar */
+    .sticky-mobile-nav {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -1665,30 +1659,14 @@ code {
         border-bottom: 3px double var(--rule-heavy);
         background-color: var(--paper-card);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 1001;
     }
 
-    .newspaper-nav.open {
+    .sticky-mobile-nav.open {
         display: flex;
         animation: fadeInNav 0.2s ease-out;
     }
 
-    @keyframes fadeInNav {
-        from {
-            opacity: 0;
-            transform: translateY(-4px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .newspaper-nav .nav-link {
+    .sticky-mobile-nav .nav-link {
         width: 100%;
         text-align: center;
         padding: 0.65rem 1rem;
@@ -1700,11 +1678,11 @@ code {
         box-sizing: border-box;
     }
 
-    .newspaper-nav .nav-link:last-child {
+    .sticky-mobile-nav .nav-link:last-child {
         border-bottom: none;
     }
 
-    .newspaper-nav .nav-link.active {
+    .sticky-mobile-nav .nav-link.active {
         background-color: var(--ink-primary);
         color: #ffffff;
         font-weight: 700;
