@@ -11,6 +11,7 @@ The Chandu Chronicle is a personal portfolio website that combines the timeless 
 ## ✨ Features
 
 ### Design & Aesthetics
+
 - **Newspaper-Style Layout**: Multi-column grid layouts mimicking traditional newspaper design
 - **Classic Typography**: Serif fonts (Georgia, Times New Roman) with proper hierarchy
 - **Paper Texture**: Subtle background texture for authentic newspaper feel
@@ -20,6 +21,7 @@ The Chandu Chronicle is a personal portfolio website that combines the timeless 
 - **Masthead**: Professional newspaper header with date, volume, and navigation
 
 ### Functionality
+
 - **Dynamic Date & Time**: Automatically updates to show current date and time
 - **Auto-Updating Experience**: Professional experience calculated from start date (May 2022)
 - **Read More/Less**: Expandable content sections for proposals and projects
@@ -29,6 +31,7 @@ The Chandu Chronicle is a personal portfolio website that combines the timeless 
 - **Social Icons**: LinkedIn and GitHub icons with black & white styling
 
 ### Pages & Sections
+
 1. **Front Page** (`index.html`) - Main introduction and quick news
 2. **Headlines** (`headlines.html`) - Projects and achievements in headline format
 3. **Editorial** (`editorial.html`) - Thoughts and articles
@@ -68,56 +71,59 @@ chandukalluru.com/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - A web server (for local development) or GitHub Pages (for hosting)
 
 ### Local Setup
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/chinnuk0521/chandukalluru.com.git
-   cd chandukalluru.com
-   ```
+
+    ```bash
+    git clone https://github.com/chinnuk0521/chandukalluru.com.git
+    cd chandukalluru.com
+    ```
 
 2. **Open in browser**
-   - Option 1: Open `index.html` directly in your browser
-   - Option 2: Use a local server:
-     ```bash
-     # Using Python
-     python -m http.server 8000
-     
-     # Using Node.js (http-server)
-     npx http-server
-     
-     # Using PHP
-     php -S localhost:8000
-     ```
+    - Option 1: Open `index.html` directly in your browser
+    - Option 2: Use a local server:
+        ```bash
+        # Using Python
+        python -m http.server 8000
+
+        # Using Node.js (http-server)
+        npx http-server
+
+        # Using PHP
+        php -S localhost:8000
+        ```
 
 3. **Access the website**
-   - Navigate to `http://localhost:8000` (or the port you specified)
+    - Navigate to `http://localhost:8000` (or the port you specified)
 
 ## 🌐 Deployment
 
 ### GitHub Pages (Recommended)
 
 1. **Enable GitHub Pages**
-   - Go to repository Settings → Pages
-   - Select `main` branch as source
-   - Choose `/ (root)` folder
-   - Click Save
+    - Go to repository Settings → Pages
+    - Select `main` branch as source
+    - Choose `/ (root)` folder
+    - Click Save
 
 2. **Custom Domain Setup**
-   - In Pages settings, add your custom domain: `chandukalluru.com`
-   - Update DNS records with your domain provider:
-     - Type: `A` or `CNAME`
-     - Value: GitHub Pages IP or `chinnuk0521.github.io`
-   - Wait for DNS propagation (can take up to 24 hours)
+    - In Pages settings, add your custom domain: `chandukalluru.com`
+    - Update DNS records with your domain provider:
+        - Type: `A` or `CNAME`
+        - Value: GitHub Pages IP or `chinnuk0521.github.io`
+    - Wait for DNS propagation (can take up to 24 hours)
 
 3. **HTTPS**
-   - GitHub Pages automatically provides HTTPS for custom domains
-   - Enable "Enforce HTTPS" in Pages settings
+    - GitHub Pages automatically provides HTTPS for custom domains
+    - Enable "Enforce HTTPS" in Pages settings
 
 ### Alternative Hosting Options
+
 - **Netlify**: Drag and drop the folder or connect GitHub repository
 - **Vercel**: Import GitHub repository
 - **Traditional Web Hosting**: Upload files via FTP/SFTP
@@ -141,9 +147,9 @@ chandukalluru.com/
 ### Dynamic Content
 
 - **Experience Calculation**: Update start date in `script.js` (line ~30)
-  ```javascript
-  const startDate = new Date(2022, 4, 1); // May 2022
-  ```
+    ```javascript
+    const startDate = new Date(2022, 4, 1); // May 2022
+    ```
 - **Date/Time Format**: Modify `updateDateTime()` function in `script.js`
 
 ## 📱 Responsive Breakpoints
@@ -162,27 +168,32 @@ chandukalluru.com/
 ## 📊 Key Sections
 
 ### Front Page
+
 - Professional introduction
 - Current role and focus
 - Quick news (Education, Contact, etc.)
 - Profile photo with newspaper-style caption
 
 ### Headlines
+
 - Project announcements
 - Achievement highlights
 - News-style headlines with excerpts
 
 ### Business
+
 - Work experience timeline
 - Technical skills
 - Professional achievements
 
 ### Projects
+
 - **Chandu UI Component Library**: React component library published to NPM
 - **Data Visualization Portfolio**: 5 advanced projects with 43+ visualizations
 - **Clykur Platform**: AI-powered freelance network
 
 ### Proposals
+
 - Healthcare Platform Proposal
 - Global Freelance Network
 - Decentralized GPU Compute Marketplace
@@ -203,6 +214,7 @@ This project is open source and available for personal use. Feel free to fork an
 ## 👤 Author
 
 **Chandu Kalluru**
+
 - Email: chandu.kalluru@outlook.com
 - LinkedIn: [linkedin.com/in/chandu-kalluru](https://linkedin.com/in/chandu-kalluru)
 - GitHub: [github.com/chinnuk0521](https://github.com/chinnuk0521)
@@ -234,6 +246,7 @@ This is a personal portfolio website. However, suggestions and feedback are welc
 ## 📞 Contact
 
 For inquiries, collaborations, or questions:
+
 - **Personal Email**: chandu.kalluru@outlook.com
 - **Collaboration Email**: buildwithchandu@hotmail.com
 - **Phone**: +91-8179299096
@@ -242,5 +255,4 @@ For inquiries, collaborations, or questions:
 
 **Built with ❤️ using HTML, CSS, and JavaScript**
 
-*Last updated: January 2025*
-
+_Last updated: January 2025_

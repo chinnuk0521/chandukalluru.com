@@ -1,89 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Chandu Chronicle | Classifieds</title>
-    <link rel="icon" type="image/png" href="Logo.png">
-    <link rel="shortcut icon" type="image/png" href="Logo.png">
-    <link rel="apple-touch-icon" href="Logo.png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Masthead / Nameplate -->
-    <header class="masthead">
-        <div class="masthead-content">
-            <h1 class="newspaper-title">chandu kalluru</h1>
-            <div class="masthead-meta">
-                <span class="date-time">Monday, January 13, 2025 | 12:00:00 PM</span>
-                <span class="tagline">Innovation Through Technology</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Chandu Chronicle | Classifieds</title>
+        <link rel="icon" type="image/png" href="Logo.png" />
+        <link rel="shortcut icon" type="image/png" href="Logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Masthead / Nameplate -->
+        <header class="masthead">
+            <div class="masthead-content">
+                <div class="masthead-brand-row">
+                    <h1 class="newspaper-title">chandu kalluru</h1>
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span class="hamburger-icon" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="masthead-meta">
+                    <span class="date-time">Monday, January 13, 2025 | 12:00:00 PM</span>
+                    <span class="tagline">Engineer</span>
+                </div>
+                <nav class="newspaper-nav">
+                    <a href="index.html" class="nav-link">Front Page</a>
+                    <a href="headlines.html" class="nav-link">Headlines</a>
+                    <a href="editorial.html" class="nav-link">Editorial</a>
+                    <a href="business.html" class="nav-link">Business</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="classifieds.html" class="nav-link active">Classifieds</a>
+                    <a href="proposals.html" class="nav-link">Proposals</a>
+                </nav>
             </div>
-            <nav class="newspaper-nav">
-                <a href="index.html" class="nav-link">Front Page</a>
-                <a href="headlines.html" class="nav-link">Headlines</a>
-                <a href="editorial.html" class="nav-link">Editorial</a>
-                <a href="business.html" class="nav-link">Business</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="classifieds.html" class="nav-link active">Classifieds</a>
-                <a href="proposals.html" class="nav-link">Proposals</a>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <!-- Main Newspaper Content -->
-    <main class="newspaper-container">
-        <div class="page-number">Page 6</div>
-        
-        <!-- Classifieds Section -->
-        <section class="section classifieds">
-            <h2 class="section-headline">CLASSIFIEDS & ENGAGEMENTS</h2>
-            <div class="classifieds-grid">
-                <div class="classified-ad">
-                    <h3 class="ad-title">Founder & Advisor</h3>
-                    <p class="ad-content">As a technical co-founder and product strategist, I am open to collaborating with early-stage startups, founders, and innovators. Seeking to advise on product-market fit, technical architecture, and go-to-market strategy.</p>
+        <!-- Main Newspaper Content -->
+        <main class="newspaper-container">
+            <!-- Classifieds Section -->
+            <section class="section classifieds">
+                <div class="classifieds-grid">
+                    <div class="classified-ad">
+                        <h3 class="ad-title">Engineering Engagements</h3>
+                        <p class="ad-content">
+                            Open to full-time Software Engineering, Forward Deployed Engineer (FDE), and Founding
+                            Engineer roles. Best suited for teams requiring autonomous technical ownership, direct
+                            product execution, and rapid delivery from zero to production.
+                        </p>
+                    </div>
+                    <div class="classified-ad">
+                        <h3 class="ad-title">Direct Contact</h3>
+                        <p class="ad-content">
+                            <strong>Email:</strong>
+                            <a href="mailto:chandu.kalluru@outlook.com" class="external-link"
+                                >chandu.kalluru@outlook.com</a
+                            ><br />
+                            <strong>Phone:</strong> <a href="tel:+918179299096" class="external-link">+91-8179299096</a
+                            ><br />
+                            <strong>Location:</strong> Bengaluru, Karnataka, India<br />
+                            <strong>Availability:</strong> Full-time & selective technical partnerships
+                        </p>
+                    </div>
+                    <div class="classified-ad">
+                        <h3 class="ad-title">Working Modes</h3>
+                        <p class="ad-content">
+                            • <strong>Zero to One:</strong> Architecture, data modeling, API design, and rapid MVP
+                            deployment.<br />
+                            • <strong>Forward Deployed:</strong> Direct client alignment, integration engineering, and
+                            business workflows.<br />
+                            • <strong>Systems & Scale:</strong> Concurrency resolution, transactional guarantees, and
+                            clean refactoring.
+                        </p>
+                    </div>
+                    <div class="classified-ad">
+                        <h3 class="ad-title">Technical Competencies</h3>
+                        <p class="ad-content">
+                            Full-stack web systems (Node.js, Express, Python, JavaScript, REST, GraphQL), database
+                            design (PostgreSQL, MongoDB), cloud & deployments (Docker, AWS), enterprise integrations
+                            (Salesforce, CRM, Webhooks), and distributed systems primitives.
+                        </p>
+                    </div>
+                    <div class="classified-ad">
+                        <h3 class="ad-title">Verified Artifacts</h3>
+                        <p class="ad-content">
+                            • <a href="projects.html#decision-os" class="external-link">Decision OS</a>: Multi-factor
+                            risk & decision intelligence.<br />
+                            • <a href="projects.html#cusown" class="external-link">Cusown</a>: High-concurrency booking
+                            engine & calendar sync.<br />
+                            • <a href="projects.html#iit-madras-rd" class="external-link">IIT Madras R&D</a>:
+                            Distributed consensus & state machines.<br />
+                            • <a href="projects.html#chandu-ui" class="external-link">Chandu UI</a>: Lightweight web
+                            component primitives.
+                        </p>
+                    </div>
+                    <div class="classified-ad">
+                        <h3 class="ad-title">Profiles & Network</h3>
+                        <p class="ad-content">
+                            <strong>LinkedIn:</strong>
+                            <a
+                                href="https://linkedin.com/in/chandu-kalluru"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="external-link"
+                                >linkedin.com/in/chandu-kalluru</a
+                            ><br />
+                            <strong>GitHub:</strong>
+                            <a
+                                href="https://github.com/chinnuk0521"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="external-link"
+                                >github.com/chinnuk0521</a
+                            ><br />
+                            Open to speaking with founders, engineering directors, and product teams building resilient
+                            systems.
+                        </p>
+                    </div>
                 </div>
-                <div class="classified-ad">
-                    <h3 class="ad-title">Contact & Ventures</h3>
-                    <p class="ad-content">
-                        <strong>Email:</strong> <a href="mailto:chandu.kalluru@outlook.com" class="external-link">chandu.kalluru@outlook.com</a><br>
-                        <strong>Phone:</strong> <a href="tel:+918179299096" class="external-link">+91-8179299096</a><br>
-                        <strong>Ownerr:</strong> <a href="https://ownerr.live" target="_blank" rel="noopener noreferrer" class="external-link">Co-founder</a><br>
-                        <strong>Clykur:</strong> <a href="https://clykur.com" target="_blank" rel="noopener noreferrer" class="external-link">Founder</a>
-                    </p>
-                </div>
-                <div class="classified-ad">
-                    <h3 class="ad-title">Investment & Partnerships</h3>
-                    <p class="ad-content">Interested in angel investing and strategic partnerships with startups in FinTech, SaaS, and Web3. Actively seeking opportunities to deploy capital and expertise to help founders build scalable businesses.</p>
-                </div>
-                <div class="classified-ad">
-                    <h3 class="ad-title">Professional Profile</h3>
-                    <p class="ad-content">Founder-engineer with a strong background in full-stack development, system design, and product strategy. Expertise in building and scaling SaaS platforms from zero to one. Proven ability to lead technical teams and drive business growth.</p>
-                </div>
-                <div class="classified-ad">
-                    <h3 class="ad-title">Key Engagements</h3>
-                    <p class="ad-content">
-                        • Co-founded and leading the technical development of <a href="https://ownerr.live" target="_blank" class="external-link">Ownerr</a>.<br>
-                        • Founded <a href="https://clykur.com" target="_blank" class="external-link">Clykur</a> to build SaaS solutions for Indian MSMEs.<br>
-                        • Published <a href="https://chanduui.space/" target="_blank" class="external-link">Chandu UI</a>, an open-source component library on NPM.<br>
-                        • Developed a comprehensive <a href="https://github.com/chinnuk0521/data-visualization-portfolio" target="_blank" class="external-link">Data Visualization Portfolio</a>.
-                    </p>
-                </div>
-                <div class="classified-ad">
-                    <h3 class="ad-title">Connect & Network</h3>
-                    <p class="ad-content">
-                        <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/chandu-kalluru" target="_blank" rel="noopener noreferrer" class="external-link">linkedin.com/in/chandu-kalluru</a><br>
-                        <strong>GitHub:</strong> <a href="https://github.com/chinnuk0521" target="_blank" rel="noopener noreferrer" class="external-link">github.com/chinnuk0521</a><br>
-                        Open to connecting with founders, investors, and technologists. Let's build the future together.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer class="newspaper-footer">
-        <p>&copy; 2025 chandu kalluru. All rights reserved. <span class="footer-pipe">|</span> <a href="projects.html" class="footer-link">← Previous</a> | <a href="proposals.html" class="footer-link">Next Page →</a></p>
-    </footer>
+        <footer class="newspaper-footer">
+            <p>
+                &copy; 2025 chandu kalluru. All rights reserved. <span class="footer-pipe">|</span>
+                <a href="projects.html" class="footer-link">← Previous</a> |
+                <a href="proposals.html" class="footer-link">Next Page →</a>
+            </p>
+        </footer>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

@@ -1,25 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const experienceElements = document.querySelectorAll('.dynamic-experience');
     if (experienceElements.length > 0) {
-        const startDate = new Date('2022-03-01');
-        const currentDate = new Date();
-        
-        let years = currentDate.getFullYear() - startDate.getFullYear();
-        let months = currentDate.getMonth() - startDate.getMonth();
-        
-        if (months < 0) {
-            years--;
-            months += 12;
-        }
-        
-        let experienceString = `${years}`;
-        if (months > 0) {
-            const decimal = months / 12;
-            experienceString = (years + decimal).toFixed(1);
-        }
-        
-        experienceElements.forEach(element => {
-            element.textContent = `${experienceString}+`;
+        // Main professional experience only:
+        // - Crystal Lotus Solutions: Jun 2024 - Dec 2024 (7 mos)
+        // - IIT Madras: Jan 2025 - Sep 2025 (9 mos)
+        // Total main experience = 16 months (~1.3+ years)
+        const mainExperienceMonths = 16;
+        const yearsDecimal = (mainExperienceMonths / 12).toFixed(1);
+        const experienceString = `${yearsDecimal}+`;
+
+        experienceElements.forEach((element) => {
+            element.textContent = experienceString;
         });
     }
 });

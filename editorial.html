@@ -1,92 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Chandu Chronicle | Editorial</title>
-    <link rel="icon" type="image/png" href="Logo.png">
-    <link rel="shortcut icon" type="image/png" href="Logo.png">
-    <link rel="apple-touch-icon" href="Logo.png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Masthead / Nameplate -->
-    <header class="masthead">
-        <div class="masthead-content">
-            <h1 class="newspaper-title">chandu kalluru</h1>
-            <div class="masthead-meta">
-                <span class="date-time">Monday, January 13, 2025 | 12:00:00 PM</span>
-                <span class="tagline">Innovation Through Technology</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Chandu Chronicle | Editorial</title>
+        <link rel="icon" type="image/png" href="Logo.png" />
+        <link rel="shortcut icon" type="image/png" href="Logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Masthead / Nameplate -->
+        <header class="masthead">
+            <div class="masthead-content">
+                <div class="masthead-brand-row">
+                    <h1 class="newspaper-title">chandu kalluru</h1>
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span class="hamburger-icon" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="masthead-meta">
+                    <span class="date-time">Monday, January 13, 2025 | 12:00:00 PM</span>
+                    <span class="tagline">Engineer</span>
+                </div>
+                <nav class="newspaper-nav">
+                    <a href="index.html" class="nav-link">Front Page</a>
+                    <a href="headlines.html" class="nav-link">Headlines</a>
+                    <a href="editorial.html" class="nav-link active">Editorial</a>
+                    <a href="business.html" class="nav-link">Business</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="classifieds.html" class="nav-link">Classifieds</a>
+                    <a href="proposals.html" class="nav-link">Proposals</a>
+                </nav>
             </div>
-            <nav class="newspaper-nav">
-                <a href="index.html" class="nav-link">Front Page</a>
-                <a href="headlines.html" class="nav-link">Headlines</a>
-                <a href="editorial.html" class="nav-link active">Editorial</a>
-                <a href="business.html" class="nav-link">Business</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="classifieds.html" class="nav-link">Classifieds</a>
-                <a href="proposals.html" class="nav-link">Proposals</a>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <!-- Main Newspaper Content -->
-    <main class="newspaper-container">
-        <div class="page-number">Page 3</div>
-        
-        <!-- Editorial Section -->
-        <section class="section editorial">
-            <h2 class="section-headline">EDITORIAL</h2>
-            <div class="editorial-columns">
-                <article class="editorial-article">
-                    <h3 class="article-headline">The Future of Startup Acquisitions</h3>
-                    <div class="article-content">
-                        <p class="drop-cap">The startup acquisition landscape is often opaque and complex, making it difficult for founders to exit their ventures at fair valuations. At <a href="https://ownerr.live" target="_blank" rel="noopener noreferrer" class="external-link">Ownerr</a>, we are building the infrastructure to bring transparency and trust to this ecosystem. Our platform connects founders with verified buyers, providing a streamlined process for ownership transfer.</p>
-                        <p>By leveraging business scoring, revenue and traffic verification, and secure deal management, we empower both founders and buyers. Our goal is to create a global marketplace where startups can be acquired with confidence and clarity, ensuring that innovation is rewarded and opportunities are accessible to all.</p>
-                    </div>
-                </article>
-                <article class="editorial-article">
-                    <h3 class="article-headline">Clykur: A Hub for Product Innovation</h3>
-                    <div class="article-content">
-                        <p class="drop-cap">Clykur has evolved into a dynamic product innovation hub dedicated to building cutting-edge software for modern businesses. Our focus is on creating scalable, high-quality SaaS platforms that address real-world challenges.</p>
-                        <p>We are currently developing two flagship products: Cusown, a smart appointment booking platform, and FreeTrust, a solution designed to build trust between freelancers and clients. As a registered MSME, <a href="https://clykur.com" target="_blank" rel="noopener noreferrer" class="external-link">Clykur</a> is committed to driving innovation and delivering software systems that empower businesses to thrive in a competitive landscape.</p>
-                    </div>
-                </article>
-                <article class="editorial-article">
-                    <h3 class="article-headline">Blockchain Research: Beyond the Hype</h3>
-                    <div class="article-content">
-                        <p class="drop-cap">During my time at IIT Madras, I've had the privilege of working on cutting-edge blockchain and distributed ledger technologies. The research focuses on practical applications: consensus mechanisms, smart contract security, and enterprise-grade solutions.</p>
-                        <p>One of the most exciting areas is Hedera Hashgraph, which offers a different approach to distributed consensus. Unlike traditional blockchains, Hashgraph uses a gossip protocol and virtual voting to achieve consensus, resulting in faster transactions and lower fees.</p>
-                        <p>Cryptography and cybersecurity are fundamental to this work. Ensuring data integrity and security in decentralized systems requires a deep understanding of cryptographic techniques, hashing algorithms, and secure protocol design.</p>
-                        <p>My work on developing a proof-of-concept decentralized e-voting application using WebAssembly and WIDL demonstrated the practical potential of these technologies. The application showcased how DLTs can provide transparency, security, and verifiability in critical systems.</p>
-                    </div>
-                </article>
-                <article class="editorial-article">
-                    <h3 class="article-headline">The Art of Full-Stack Development</h3>
-                    <div class="article-content">
-                        <p class="drop-cap">Building scalable web applications requires more than just coding skills. It demands an understanding of the entire software development lifecycle, from requirement gathering to deployment and maintenance.</p>
-                        <p>My experience as a Full-Stack Developer has taught me the importance of clean, scalable code. Whether working with React, React Native, JavaScript, TypeScript, or Python, the principles remain the same: write code that is maintainable, testable, and efficient.</p>
-                        <p>Agile methodologies and Test-Driven Development (TDD) practices have been instrumental in delivering high-quality software solutions. These approaches ensure that code is not just functional, but also robust and adaptable to changing requirements.</p>
-                        <p>Integration is another critical aspect. Working with RESTful APIs for payment gateways, authentication, and third-party services requires careful design and error handling. The goal is always to create seamless user experiences while maintaining system reliability.</p>
-                    </div>
-                </article>
-                <article class="editorial-article">
-                    <h3 class="article-headline">Data Analytics: Turning Information Into Insights</h3>
-                    <div class="article-content">
-                        <p class="drop-cap">In today's data-driven world, the ability to transform raw data into actionable insights is invaluable. My work with Power BI has shown me how effective data visualization can drive business decisions.</p>
-                        <p>Designing ETL pipelines with automated error handling and validation is crucial for data integrity. These pipelines ensure that data flows smoothly from source to destination, with quality checks at every stage.</p>
-                        <p>DAX calculations and data modeling are essential skills for creating meaningful dashboards. The goal is not just to display data, but to tell a story that helps stakeholders understand trends, identify opportunities, and make informed decisions.</p>
-                        <p>Delivering Power BI dashboards with 90%+ accuracy requires attention to detail and a deep understanding of business requirements. It's about more than just charts and graphs it's about creating tools that empower decision-makers.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
+        <!-- Main Newspaper Content -->
+        <main class="newspaper-container">
+            <!-- Editorial Section -->
+            <section class="section editorial">
+                <div class="editorial-columns">
+                    <article class="editorial-article">
+                        <h3 class="article-headline">Solving the Problem Before Writing Code</h3>
+                        <div class="article-content">
+                            <p class="drop-cap">
+                                One of the most frequent points of failure in software engineering is solving the wrong
+                                problem with high technical sophistication. Building software that actually works in
+                                production begins with rigorous problem definition: understanding real-world operational
+                                bottlenecks, user friction, and system constraints before committing to an architecture.
+                            </p>
+                            <p>
+                                Whether operating as a forward-deployed engineer embedded with a partner team or
+                                building a product from scratch, the core discipline remains the same: treat
+                                requirements as hypotheses to be tested, build the simplest architecture that solves the
+                                root problem, and deliver dependable software teams can maintain and grow with.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="editorial-article">
+                        <h3 class="article-headline">Explainable AI in Decision Intelligence (Decision OS)</h3>
+                        <div class="article-content">
+                            <p class="drop-cap">
+                                In high-stakes business and investment evaluations, generative AI hallucinations are
+                                unacceptable. Decision makers do not need another chat interface; they require
+                                explainable, structured analysis backed by transparent reasoning chains.
+                            </p>
+                            <p>
+                                In developing <a href="projects.html#decision-os" class="external-link">Decision OS</a>,
+                                we paired deterministic multi-factor scoring algorithms with contextual LLM synthesis,
+                                deployed within containerized microservices. By enforcing explicit weightings and
+                                reproducible evaluation trails, the system produces actionable risk assessments that
+                                humans can audit, understand, and trust.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="editorial-article">
+                        <h3 class="article-headline">Architecting for Concurrency in Scheduling (Cusown)</h3>
+                        <div class="article-content">
+                            <p class="drop-cap">
+                                Appointment scheduling appears simple on the surface until real-world concurrency and
+                                operational dynamics collide. Businesses do not operate on clean 30-minute grids. They
+                                require dynamic buffer times between distinct service types, flexible multi-staff
+                                assignment, and protection against double-booking during simultaneous checkout sessions.
+                            </p>
+                            <p>
+                                In building <a href="projects.html#cusown" class="external-link">Cusown</a>, the
+                                engineering focus centered on deterministic slot allocation, atomic locking to prevent
+                                race conditions, and an event-driven notification layer. High-concurrency systems must
+                                be predictable under peak booking periods, giving service providers complete control
+                                over their schedule without manual intervention.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="editorial-article">
+                        <h3 class="article-headline">Consensus Protocols and Practical Decentralization</h3>
+                        <div class="article-content">
+                            <p class="drop-cap">
+                                During my research at IIT Madras in the CSE department, our work centered on the
+                                practical engineering challenges of distributed ledger technologies: consensus latency,
+                                cryptographic verification, and enterprise scalability.
+                            </p>
+                            <p>
+                                Rather than treating blockchain as a universal database, our focus was evaluating where
+                                distributed consensus genuinely adds security—such as tamper-evident audit trails and
+                                decentralized voting verification. Building a proof-of-concept e-voting engine using
+                                WebAssembly (WASM) demonstrated how sandboxed, deterministic execution can provide
+                                transparent verifiability without compromising system throughput.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="editorial-article">
+                        <h3 class="article-headline">Architectural Discipline in Production Integrations</h3>
+                        <div class="article-content">
+                            <p class="drop-cap">
+                                Production software lives in messy environments with heterogeneous data formats,
+                                fluctuating network conditions, and evolving business rules. My work engineering
+                                Salesforce solutions and enterprise integrations at Crystal Lotus Solutions reinforced
+                                the value of clean boundaries and automated error recovery.
+                            </p>
+                            <p>
+                                Every external integration introduces a failure domain. Designing ETL pipelines with
+                                defensive schema validation, automated retry mechanisms, and structured logging prevents
+                                small network hiccups from cascading into business-stopping errors. Code quality is
+                                measured by how gracefully a system operates when something inevitably fails.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
 
-    <footer class="newspaper-footer">
-        <p>&copy; 2025 chandu kalluru. All rights reserved. <span class="footer-pipe">|</span> <a href="headlines.html" class="footer-link">← Previous</a> | <a href="business.html" class="footer-link">Next Page →</a></p>
-    </footer>
+        <footer class="newspaper-footer">
+            <p>
+                &copy; 2025 chandu kalluru. All rights reserved. <span class="footer-pipe">|</span>
+                <a href="headlines.html" class="footer-link">← Previous</a> |
+                <a href="business.html" class="footer-link">Next Page →</a>
+            </p>
+        </footer>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

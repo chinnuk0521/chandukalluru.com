@@ -1,126 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Chandu Chronicle | Headlines</title>
-    <link rel="icon" type="image/png" href="Logo.png">
-    <link rel="shortcut icon" type="image/png" href="Logo.png">
-    <link rel="apple-touch-icon" href="Logo.png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Masthead / Nameplate -->
-    <header class="masthead">
-        <div class="masthead-content">
-            <h1 class="newspaper-title">chandu kalluru</h1>
-            <div class="masthead-meta">
-                <span class="date-time">Monday, January 13, 2025 | 12:00:00 PM</span>
-                <span class="tagline">Innovation Through Technology</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Chandu Chronicle | Headlines</title>
+        <link rel="icon" type="image/png" href="Logo.png" />
+        <link rel="shortcut icon" type="image/png" href="Logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Masthead / Nameplate -->
+        <header class="masthead">
+            <div class="masthead-content">
+                <div class="masthead-brand-row">
+                    <h1 class="newspaper-title">chandu kalluru</h1>
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span class="hamburger-icon" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="masthead-meta">
+                    <span class="date-time">Monday, January 13, 2025 | 12:00:00 PM</span>
+                    <span class="tagline">Engineer</span>
+                </div>
+                <nav class="newspaper-nav">
+                    <a href="index.html" class="nav-link">Front Page</a>
+                    <a href="headlines.html" class="nav-link active">Headlines</a>
+                    <a href="editorial.html" class="nav-link">Editorial</a>
+                    <a href="business.html" class="nav-link">Business</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="classifieds.html" class="nav-link">Classifieds</a>
+                    <a href="proposals.html" class="nav-link">Proposals</a>
+                </nav>
             </div>
-            <nav class="newspaper-nav">
-                <a href="index.html" class="nav-link">Front Page</a>
-                <a href="headlines.html" class="nav-link active">Headlines</a>
-                <a href="editorial.html" class="nav-link">Editorial</a>
-                <a href="business.html" class="nav-link">Business</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="classifieds.html" class="nav-link">Classifieds</a>
-                <a href="proposals.html" class="nav-link">Proposals</a>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <!-- Main Newspaper Content -->
-    <main class="newspaper-container">
-        <div class="page-number">Page 2</div>
-        
-        <!-- Headlines Section -->
-        <section class="section headlines">
-            <h2 class="section-headline">HEADLINES</h2>
-            <div class="headlines-grid">
-                <article class="headline-item">
-                    <h3 class="headline-title">Ownerr Launches to Revolutionize Startup Acquisitions, Co-Founded by Me</h3>
-                    <p class="headline-excerpt">Ownerr, co-founded by me, is building the infrastructure for startup ownership transfer. The platform enables founders to exit their startups at fair valuations while providing buyers with verified acquisition opportunities. Through business scoring, revenue and traffic verification, legal documentation, and secure deal management, Ownerr brings transparency and trust to the global startup acquisition ecosystem. Follow its progress on <a href="https://ownerr.live" target="_blank" rel="noopener noreferrer" class="external-link">Ownerr.live</a> and <a href="https://linkedin.com/company/ownerr" target="_blank" rel="noopener noreferrer" class="external-link">LinkedIn</a>.</p>
-                </article>
-                <article class="headline-item">
-                    <h3 class="headline-title">Clykur Rebrands as Product Innovation Hub, Unveils New SaaS Platforms</h3>
-                    <p class="headline-excerpt">Clykur has repositioned as a product innovation company building cutting-edge software for modern businesses. The firm is developing new SaaS products, including Cusown, a smart appointment booking platform, and FreeTrust, a freelancer-client trust-building solution. Officially registered as an MSME, Clykur is focused on delivering scalable, high-quality software systems.</p>
-                </article>
-                <article class="headline-item">
-                    <h3 class="headline-title">IIT Madras Research Breakthrough in Blockchain Technology</h3>
-                    <p class="headline-excerpt">Project Associate contributes to cutting-edge blockchain and DLT research, focusing on Hedera Hashgraph and enterprise solutions. Developed proof-of-concept decentralized e-voting application using WebAssembly and WIDL.</p>
-                </article>
-                <article class="headline-item">
-                    <h3 class="headline-title">Crystal Lotus Solutions Achieves 20% Process Improvement</h3>
-                    <p class="headline-excerpt">Software Developer delivers innovative solutions using Python, SQL, and JavaScript. Designed optimized ETL pipelines with automated error handling, improving data flow efficiency by 25%.</p>
-                </article>
-                <article class="headline-item">
-                    <h3 class="headline-title">Power BI Dashboards Deliver 90%+ Accuracy in Analytics</h3>
-                    <p class="headline-excerpt">Full-Stack Developer & Power BI Developer creates interactive dashboards enabling actionable business insights. Automated data pipelines improve migration efficiency by 25% across multiple projects.</p>
-                </article>
-                <article class="headline-item">
-                    <h3 class="headline-title">DLT Solution Reduces Transaction Verification Time by 40%</h3>
-                    <p class="headline-excerpt">Research team at IIT Madras successfully implements distributed ledger technology solution, significantly reducing transaction verification time while maintaining security and efficiency standards.</p>
-                </article>
-                <article class="headline-item">
-                    <h3 class="headline-title">System Downtime Reduced by 30% Through Optimization</h3>
-                    <p class="headline-excerpt">Software engineering expertise in data services optimization leads to significant reduction in system downtime, improving reliability and user experience across enterprise applications.</p>
-                </article>
-                <article class="headline-item" id="chandu-ui-headline">
-                    <h3 class="headline-title">Chandu UI Component Library Published to NPM</h3>
-                    <p class="headline-excerpt">Successfully developed and published <a href="https://chanduui.space/" target="_blank" rel="noopener noreferrer" class="external-link">Chandu UI</a>, a custom UI component library now available on <a href="https://www.npmjs.com/~chanduui" target="_blank" rel="noopener noreferrer" class="external-link">NPM</a>. Install via <code>npm i chandu-ui-components</code>. Repository available on <a href="https://github.com/chinnuk0521/Chandu-UI" target="_blank" rel="noopener noreferrer" class="external-link">GitHub</a>. See full project details <a href="projects.html#chandu-ui" class="citation-link">[1]</a>.</p>
-                </article>
-                <article class="headline-item" id="data-viz-headline">
-                    <h3 class="headline-title">Data Visualization Portfolio Launched for Learning Community</h3>
-                    <p class="headline-excerpt">Comprehensive data visualization portfolio featuring 5 advanced projects across sales analytics, healthcare insights, IPL performance, enterprise intelligence, and global unemployment analytics. Providing real-world data and analytics insights to help beginners and early-stage job seekers learn and build projects. Available on <a href="https://github.com/chinnuk0521/data-visualization-portfolio" target="_blank" rel="noopener noreferrer" class="external-link">GitHub</a>. View complete portfolio <a href="projects.html#data-viz-portfolio" class="citation-link">[1]</a>.</p>
-                </article>
-            </div>
-        </section>
+        <!-- Main Newspaper Content -->
+        <main class="newspaper-container">
+            <!-- Headlines Section -->
+            <section class="section headlines">
+                <div class="headlines-grid">
+                    <article class="headline-item">
+                        <h3 class="headline-title">
+                            Decision OS Unveils Multi-Factor AI Decision Intelligence Platform
+                        </h3>
+                        <p class="headline-excerpt">
+                            Designed a containerized decision intelligence engine combining deterministic multi-factor
+                            scoring algorithms with contextual LLM synthesis. Built with Docker Compose, FastAPI, and
+                            structured data ingestion to provide traceable, explainable risk assessments. See details in
+                            <a href="projects.html#decision-os" class="citation-link">[Projects]</a>.
+                        </p>
+                    </article>
+                    <article class="headline-item">
+                        <h3 class="headline-title">
+                            Cusown Launches Concurrency-Safe Scheduling Engine for Service Businesses
+                        </h3>
+                        <p class="headline-excerpt">
+                            Engineered a robust appointment booking infrastructure tailored for service-based
+                            businesses. Built conflict-free slot reservation logic, customizable buffer times,
+                            multi-staff calendar rules, and automated notification webhooks to eliminate manual
+                            scheduling overhead. See details in
+                            <a href="projects.html#cusown" class="citation-link">[Projects]</a>.
+                        </p>
+                    </article>
+                    <article class="headline-item">
+                        <h3 class="headline-title">
+                            IIT Madras Research Breakthrough in Distributed Consensus &amp; Cryptography
+                        </h3>
+                        <p class="headline-excerpt">
+                            Project Associate in the CSE department contributes to cutting-edge research on Hedera
+                            Hashgraph, consensus protocols, and cryptographic data integrity. Developed a
+                            proof-of-concept decentralized e-voting application using WebAssembly and WIDL. See details
+                            in <a href="projects.html#iit-madras-rd" class="citation-link">[Projects]</a>.
+                        </p>
+                    </article>
+                    <article class="headline-item">
+                        <h3 class="headline-title">
+                            Crystal Lotus Solutions Achieves 25% Data Flow Optimization via Automation
+                        </h3>
+                        <p class="headline-excerpt">
+                            Software Engineer delivers production Salesforce and full-stack solutions using Apex,
+                            Lightning Web Components (LWC), React.js, Python, and SQL. Built automated workflows and
+                            optimized ETL pipelines, improving cross-service data flow efficiency by 25%. See details in
+                            <a href="projects.html#client-engineering" class="citation-link">[Projects]</a>.
+                        </p>
+                    </article>
+                    <article class="headline-item" id="chandu-ui-headline">
+                        <h3 class="headline-title">Chandu UI Component Library Published to NPM</h3>
+                        <p class="headline-excerpt">
+                            Developed and published
+                            <a
+                                href="https://chanduui.space/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="external-link"
+                                >Chandu UI</a
+                            >, a custom UI component library available on
+                            <a
+                                href="https://www.npmjs.com/~chanduui"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="external-link"
+                                >NPM</a
+                            >
+                            (<code>npm i chandu-ui-components</code>). Features accessible React components with
+                            comprehensive documentation and TypeScript support.
+                        </p>
+                    </article>
+                    <article class="headline-item" id="data-viz-headline">
+                        <h3 class="headline-title">Data Visualization Portfolio Launched with 43+ Analytics Charts</h3>
+                        <p class="headline-excerpt">
+                            Comprehensive data analytics repository featuring 5 end-to-end projects across sales,
+                            healthcare, and global unemployment. Built with Python and Power BI to demonstrate automated
+                            ETL pipelines and multi-dimensional statistical models.
+                        </p>
+                    </article>
+                    <article class="headline-item">
+                        <h3 class="headline-title">
+                            Ownerr Co-Founded to Build Transparent Startup Acquisition Infrastructure (Exited)
+                        </h3>
+                        <p class="headline-excerpt">
+                            Co-founded and led technical architecture for Ownerr (exited Aug 2026), building startup
+                            ownership transfer infrastructure including business scoring, revenue verification, and
+                            secure deal rooms.
+                        </p>
+                    </article>
+                </div>
+            </section>
 
-        <!-- Achievements Section -->
-        <section class="section achievements">
-            <h2 class="section-headline">KEY ACHIEVEMENTS</h2>
-            <div class="achievements-grid">
-                <div class="achievement-item">
-                    <h4 class="achievement-title">Venture Co-Founding</h4>
-                    <p>Co-founded <a href="https://ownerr.live" target="_blank" rel="noopener noreferrer" class="external-link">Ownerr.live</a> to build infrastructure for startup ownership transfer, bringing transparency to the acquisition ecosystem.</p>
+            <!-- Achievements Section -->
+            <section class="section achievements">
+                <h2 class="section-lead-title">KEY ACHIEVEMENTS</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <h4 class="achievement-title">AI Decision Systems</h4>
+                        <p>
+                            Designed a containerized decision intelligence framework delivering explainable risk
+                            evaluations in <a href="projects.html#decision-os" class="external-link">Decision OS</a>.
+                        </p>
+                    </div>
+                    <div class="achievement-item">
+                        <h4 class="achievement-title">Scheduling Engine Architecture</h4>
+                        <p>
+                            Engineered concurrency-safe slot allocation and dynamic rule engine for service businesses
+                            in <a href="projects.html#cusown" class="external-link">Cusown</a>.
+                        </p>
+                    </div>
+                    <div class="achievement-item">
+                        <h4 class="achievement-title">Distributed Systems R&amp;D</h4>
+                        <p>
+                            Implemented low-latency consensus protocols and a WebAssembly-based e-voting PoC at IIT
+                            Madras.
+                        </p>
+                    </div>
+                    <div class="achievement-item">
+                        <h4 class="achievement-title">Enterprise API &amp; Automation</h4>
+                        <p>
+                            Improved cross-system data migration and workflow efficiency by 25% through automated
+                            pipelines at Crystal Lotus Solutions.
+                        </p>
+                    </div>
+                    <div class="achievement-item">
+                        <h4 class="achievement-title">Open Source Primitives</h4>
+                        <p>
+                            Published
+                            <a
+                                href="https://chanduui.space/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="external-link"
+                                >Chandu UI</a
+                            >
+                            component library to NPM, providing accessible React components.
+                        </p>
+                    </div>
+                    <div class="achievement-item">
+                        <h4 class="achievement-title">Venture Co-Founding</h4>
+                        <p>
+                            Co-founded
+                            <a
+                                href="https://ownerr.live"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="external-link"
+                                >Ownerr</a
+                            >
+                            (exited) to build transparent startup acquisition infrastructure.
+                        </p>
+                    </div>
                 </div>
-                <div class="achievement-item">
-                    <h4 class="achievement-title">SaaS Product Development</h4>
-                    <p>Repositioned Clykur as a product innovation hub, developing new SaaS platforms like Cusown and FreeTrust for modern businesses.</p>
-                </div>
-                <div class="achievement-item">
-                    <h4 class="achievement-title">DLT Innovation</h4>
-                    <p>Successfully implemented a DLT solution reducing transaction verification time by 40%</p>
-                </div>
-                <div class="achievement-item">
-                    <h4 class="achievement-title">Data Migration Efficiency</h4>
-                    <p>Enhanced data migration efficiency by 25% through automated pipelines</p>
-                </div>
-                <div class="achievement-item">
-                    <h4 class="achievement-title">Analytics Excellence</h4>
-                    <p>Delivered Power BI dashboards with 90%+ accuracy for business intelligence</p>
-                </div>
-                <div class="achievement-item">
-                    <h4 class="achievement-title">System Reliability</h4>
-                    <p>Reduced system downtime by 30% via optimized data services</p>
-                </div>
-                <div class="achievement-item">
-                    <h4 class="achievement-title">Open Source Contribution</h4>
-                    <p>Published <a href="https://chanduui.space/" target="_blank" rel="noopener noreferrer" class="external-link">Chandu UI</a> component library to NPM, making reusable UI components available to the developer community</p>
-                </div>
-                <div class="achievement-item">
-                    <h4 class="achievement-title">Educational Resource Creation</h4>
-                    <p>Created comprehensive <a href="https://github.com/chinnuk0521/data-visualization-portfolio" target="_blank" rel="noopener noreferrer" class="external-link">data visualization portfolio</a> with multiple projects across multiple sectors, providing real data and analytics insights for beginners and early-stage job seekers to learn and build projects</p>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer class="newspaper-footer">
-        <p>&copy; 2025 chandu kalluru. All rights reserved. <span class="footer-pipe">|</span> <a href="index.html" class="footer-link">← Previous</a> | <a href="editorial.html" class="footer-link">Next Page →</a></p>
-    </footer>
+        <footer class="newspaper-footer">
+            <p>
+                &copy; 2025 chandu kalluru. All rights reserved. <span class="footer-pipe">|</span>
+                <a href="index.html" class="footer-link">← Previous</a> |
+                <a href="editorial.html" class="footer-link">Next Page →</a>
+            </p>
+        </footer>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
